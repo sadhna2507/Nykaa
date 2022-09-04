@@ -1,0 +1,375 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Inter, Roboto, Arial, sans-serif;
+    background-color: rgb(243, 243, 243);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.footer_class{
+    width: 100%;
+    margin-top: 10px;
+    /* content-visibility: auto; */
+    background: #f3f3f3;
+    margin: 40px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    }
+/* ********************************************contact container-1********************************** */
+.contact{
+    /* background-color: 2px solid black; */
+    width: 100%;
+    padding: 40px 0;
+    background-color: #3f414d;
+}
+
+.inner_flex_contact{
+    /* border: 2px solid goldenrod; */
+    max-width: 1200px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+/* --------------------------------------------email box---------------------------------------- */
+.email{
+    /* border: 2px solid goldenrod; */
+    background-color: rgb(63, 65, 77);
+    color: rgb(255, 255, 255);
+    padding: 0px 30px;
+    line-height: 20px;
+}
+.mail_icon{
+    /* border: 2px solid goldenrod; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+}
+.fa-envelope{
+    font-size: 20px;
+}
+.email_input{
+    /* border: 2px solid goldenrod; */
+    margin-top: 10px;
+}
+.email_input .input{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 72%;
+    outline: none;
+    padding: 8px 5px;
+    margin-right: 3%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+button{
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 6px 6px;
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    font-weight: 600; 
+    line-height: 20px;
+}
+button, input {
+    overflow: visible;
+}
+.email_input .validation{
+    /* border: 2px solid goldenrod; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    width: 100%;
+    color: red;
+}
+
+
+/* -----------------------------------dowmload box---------------------------------- */
+.downloads{
+    /* border: 2px solid goldenrod; */
+    background-color: rgb(63, 65, 77);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.phone_icon{
+    /* border: 2px solid goldenrod; */
+    margin-bottom: 10px;
+}
+.fa-mobile-screen-button{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.apps{
+    /* border: 2px solid goldenrod; */
+    margin: 0px;
+    padding: 0px;
+}
+.google_play_store, .apple_store{
+    margin: 0px 3px;
+    display: inline-block;    
+}
+
+/* ----------------------------------helpline box---------------------------------- */
+.helpline{
+    /* border: 2px solid goldenrod; */
+    color: #ffffff;
+    display: flex;
+    /* margin-left: 55px; */
+}
+.call_icon{
+    /* border: 2px solid goldenrod; */
+    padding-right: 10px;
+}
+.call_symbol{
+    font-size: 20px;
+}
+.address .statement{
+    /* border: 2px solid goldenrod; */
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+/* *******************************************contact container -1 END***************************** */
+
+
+
+
+
+
+/* ***********************************infirmation part container-2******************************** */
+.information{
+    /* border: 2px solid black; */
+    background-color: #8c8d94;
+    color: #fff;
+    padding: 45px 0px 30px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+.inner_flex_info{
+    /* border: 2px solid goldenrod; */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+.box1{
+    /* border: 2px solid goldenrod; */
+    /* width: 20px; */
+    padding: 10px;
+    width: 20%;
+    
+}
+h3{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.link_box{
+    list-style: none;
+}
+.list-1{
+    font-size: 12px;
+    /* font-weight: 400px; */
+    line-height: 16px;
+    letter-spacing: 0;
+    margin-bottom: 11px;
+    color: inherit;
+    display: inline-block;
+    transition: all ease-in-out 300ms;
+    text-decoration: none;
+}
+.list-1:hover{
+    color: #fc2779;
+}
+
+/* ***********************************infirmation part container-2 END******************************** */
+
+
+
+
+
+
+/* ***********************************policies part  container -3*************************************** */
+.policies{
+    /* border: 2px solid black; */
+    width: 100%;
+    padding: 40px 0;
+}
+.inner_flex_policies{
+    /* border: 2px solid goldenrod; */
+    max-width: 1200px;
+    padding: 0 30px;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* -------------------------------------------policy part------------------------------------ */
+.four_policies{
+    /* border: 2px solid goldenrod; */
+    background-color: #f3f3f3;
+    color: #3f3f51;
+    margin-top: 9px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+}
+.four_policies :first-child{
+padding-left: 0px;
+}
+.four_policies :last-child{
+    padding-right: 0px;
+}
+
+/* ------------------------------------policies div----------------------------------------- */
+.free_shipping, .returns, .authenticity, .brands{
+    /* border: 2px solid goldenrod; */
+    padding: 0 25px;
+    display: flex;
+    line-height: 20px;
+}
+/* ----------------------------policies div inner content--------------------------------- */
+.free, .easy_returns, .authentic, .brand_count{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    text-transform: uppercase;
+    margin: 0 15px 10px 15px;
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.label_free, .label_authenticity, .label_return, .label_count{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    padding: 0 15px;
+}
+/* .free_shipping, .returns, .authenticity, .brands img{ */
+    /* margin-bottom: auto; */
+    /* max-width: 100%;
+
+    height: auto;
+    vertical-align: middle; */
+    /* border: 0; */
+/* } */
+/* ---------------------------------icons part--------------------------------- */
+.show_love{
+    /* border: 2px solid goldenrod; */
+    background-color: #f3f3f3;
+    padding: 20px 0 0 10px;
+    margin-top: 9px;
+}
+.love{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    /* text-transform: lowercase; */
+}
+.icons{
+    margin: 6px 0 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.link_icon{
+    margin: 0px;
+}
+social_icon{
+    display: inline-block;
+    padding: 0.25rem;
+}
+/* ***********************************policies part  container -3 END************************************** */
+
+
+
+
+
+
+
+
+/* *********************************************Terms and conditions Container 4****************************** */
+.terms_cond{
+    /* border: 2px solid black; */
+    background-color: #fc2779;
+    color: #ffffff;
+    border-top: 1px solid #fff;
+    text-align: center;
+    line-height: 18px;
+    padding: 16px;
+}
+
+.terms_cond a{
+    /* border: 2px solid black; */
+    /* border: 2px solid black; */
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    margin: 0;
+
+}
+
+/* *********************************************Terms and conditions Container 4  END****************************** */
+
+
+
+
+/* ********************************************copyright container 5*********************************** */
+.copyright{
+    /* border: 2px solid black; */
+    background-color: #fc2779;
+    color: #ffffff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.copyright p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
