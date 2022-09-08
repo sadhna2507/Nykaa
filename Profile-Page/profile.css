@@ -119,7 +119,7 @@ a:hover{
     position : relative;
 }
 .user_details{
-    background: url(myaccountbg.png) no-repeat;
+    background: url(Profile-Page\images\myaccountbackground.png) no-repeat;
     background-size: cover;
     height: 275px;
     padding-top: 35px;
