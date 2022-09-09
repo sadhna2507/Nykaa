@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="productpg.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.webp">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- slick theme css -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <main>
+        <!-- banner here -->
+        <section class="container">
+
+            <!-- breadcrumbs -->
+            <ul class="breadcrumb">
+                <li class="breadcrumb_li"><a class="pagename" href="#">Home</a><span class="arrow">❯</span></li>
+                <li class="breadcrumb_li"><a class="pagename" href="#">Makeup</a><span class="arrow">❯</span></li>
+                <li class="last_list breadcrumb_li"><a class="pagename" href="#">Face</a></li>
+            </ul>
+
+
+            <div class="title">
+                <h1 class="heading"> Face Makeup Collection
+                    <span class="head_span">(3245)</span>
+                </h1>
+            </div>
+
+            <!-- slider -->
+            <div class="slider">
+                <div class="item">
+                    <img src="https://images-static.nykaa.com/uploads/6c69139e-b8c7-41b1-86ae-497dda6c0bf7.jpg?tr=w-1200,cm-pad_resize"
+                        alt="Image" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="https://images-static.nykaa.com/uploads/29f44039-3002-4087-88b1-1c6bda128db7.png?tr=w-1200,cm-pad_resize"
+                        alt="Image" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="https://images-static.nykaa.com/uploads/1e8e57a6-3a48-490e-8560-0ddb86653bfc.jpg?tr=w-1200,cm-pad_resize"
+                        alt="Image" class="img-fluid">
+                </div>
+
+            </div>
+
+            <div class="nykainfo">
+                <div class="textInfo">
+                    <p class="para">Euphoria Is Serving Up ‘Emotional Glam’ With These 12 Groundbreaking Beauty Moments
+                    </p>
+                    <div class="subText">
+                        <p class="para2">We’ve compiled iconic beauty moments the cast rocked throughout season 1, along
+                            with a few standouts from season 2, to bookmark as inspiration.</p>
+                        <a href="#" class="a_link">Read More On Nykaa's Beauty Book></a>
+                    </div>
+                </div>
+                <div class="textImg">
+                    <img src="images/img.jpg" class="infoImg" alt="Girl">
+                </div>
+            </div>
+
+
+        </section>
+        <!-- product list here -->
+        <section class="container ">
+            <div class="product_title">
+                <h1 class="product_head">All Products</h1>
+            </div>
+            <div class="wrapper">
+
+                <!-- left side -->
+                <div class="filters">
+                    <div class="sort">
+                        <button class="sortBtn">
+                            <span class="sortName">Sort By : </span>
+                            <i class='bx bx-chevron-down downArr'></i>
+                        </button>
+                        <ul class="sortDiv" style="display: none;">
+                            <div class="sortEl">
+                                <label for="popularity" class="labelClass">Lipstick</label>
+                                <input type="radio" id="popularity" name="product-radio" value="lipstick" >
+                            </div>
+                            <div class="sortEl">
+                                <label for="discount" class="labelClass">liquid</label>
+                                <input type="radio" id="discount" name="product-radio" value="liquid">
+                            </div>
+                            <div class="sortEl">
+                                <label for="name" class="labelClass">Eye shadow</label>
+                                <input type="radio" id="name" name="product-radio" value="eyeshadow">
+                            </div>
+                            <div class="sortEl">
+                                <label for="newArrival" class="labelClass">Powder</label>
+                                <input type="radio" id="newArrival" name="product-radio" value="powder">
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="filters_div">
+                        <div class="categoryBox b_b">
+
+                            <div class="categery d-flex">
+                                <p class="catTitle">Categery</p>
+                                <span class="Cat-DownArrow CATDOWN CatArrow">˅</span>
+                                <span class="Cat-UpArrow CATCUT CatArrow">✖</span>
+                            </div>
+
+                            <div class="catOptions " style="display: none;">
+
+                                <div class="control_value d-flex">
+                                    <div class="catnamebox">
+                                        <span class="catname">Miss Claire</span>
+                                        <span class="count">136</span>
+                                    </div>
+
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+
+                                </div>
+
+                                <div class="control_value d-flex">
+                                    <div class="catnamebox">
+                                        <span class="catname">Makeup Revolution</span>
+                                        <span class="count">166</span>
+                                    </div>
+
+                                    <div class="labels">
+                                        <input id="checkbox_MakeupRevolution" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Makeup Revolution">
+                                    </div>
+
+                                </div>
+
+                                <div class="control_value d-flex">
+                                    <div class="catnamebox">
+                                        <span class="catname">Nykaa Cosmetics</span>
+                                        <span class="count">306</span>
+                                    </div>
+
+                                    <div class="labels">
+                                        <input id="checkbox_nyka" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_nyka">
+                                    </div>
+
+                                </div>
+
+                                <div class="control_value d-flex">
+                                    <div class="catnamebox">
+                                        <span class="catname">Lakme</span>
+                                        <span class="count">136</span>
+                                    </div>
+
+                                    <div class="labels">
+                                        <input id="checkbox_Lakme" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Lakme">
+                                    </div>
+
+                                </div>
+
+                                <div class="control_value d-flex">
+                                    <div class="catnamebox">
+                                        <span class="catname">Miss Claire</span>
+                                        <span class="count">136</span>
+                                    </div>
+
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox" value="missClaire">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+
+                                </div>
+
+                                <div class="control-indicator checkbox ">
+
+                                </div>
+                                </label>
+                            </div>
+
+
+                        </div>
+
+                        <div class="Price-box b_b">
+                            <div class="FPRICE d-flex">
+                                <p class="catTitle">Price</p>
+                                <span class="Cat-DownArrow PriDOWN CatArrow">˅</span>
+                                <span class="Cat-UpArrow PriCUT CatArrow" style="display: none;">x</span>
+                            </div>
+                            <div class="PRICEMULTI" style="display: none;">
+                                <div class="priceDiv">
+                                    <p>Rs. 0 - Rs. 499</p>
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+                                </div>
+
+                                <div class="priceDiv">
+                                    <p>Rs. 500 - Rs. 999</p>
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+                                </div>
+                                <div class="priceDiv">
+                                    <p>Rs. 1000 - Rs. 1999</p>
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+                                </div>
+                                <div class="priceDiv">
+                                    <p>Rs. 2000 - Rs. 2999</p>
+                                    <div class="labels">
+                                        <input id="checkbox_Miss" type="checkbox">
+                                        <label class="control control_checkbox" for="checkbox_Miss">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="discount  box d-flex b_b">
+                            <p class="catTitle">Discount</p>
+                            <span class="Cat-DownArrow disDOWN CatArrow">˅</span>
+                            <!-- <span class="Cat-UpArrow disCUT CatArrow" style="display: none;" >x</span> -->
+                        </div>
+                        
+
+                        <div class="brand box d-flex b_b">
+                            <p class="catTitle">Brand</p>
+                            <span class="Cat-DownArrow brandDOWN CatArrow">˅</span>
+                            <!-- <span class="Cat-UpArrow disCUT CatArrow" style="display: none;" >x</span> -->
+                        </div>
+
+
+
+                    </div>
+
+                  
+                </div>
+
+
+                <!-- Right side -->
+                <div class="products">
+
+                    <div class="loading">
+                    <img src="images/Loading_2.gif" width="30" />
+                    <span>Loading</span>
+                    </div>
+
+
+                  
+
+
+
+                  
+
+                </div>
+
+                  <div class="paginationbox" style="display:none">
+
+                        <p class="paginationText">Page 1</p>
+                        <div class="pagination">
+                            <a href="#" class="pageLink  arrows">
+                                < </a>
+                                    <a href="#" class="pageLink">1</a>
+                                    <a href="#" class="pageLink active">2</a>
+                                    <a href="#" class="pageLink">3</a>
+                                    <a href="#" class="pageLink">4</a>
+                                    <a href="#" class="pageLink">5</a>
+                                    <a href="#" class="pageLink">6</a>
+                                    <a href="#" class="pageLink arrows"> > </a>
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slickSLider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="productpg.js"></script>
+
+
+</body>
+
+</html>
