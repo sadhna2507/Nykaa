@@ -98,7 +98,8 @@ button, input {
     line-height: 20px;
     letter-spacing: 0px;
     width: 100%;
-    color: red;
+    /* color: red; */
+    /* display: none; */
 }
 
 
