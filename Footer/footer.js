@@ -11,19 +11,20 @@ function send(event){
 let inputVal = document.querySelector(".input").value
 let validation = document.getElementById("valid")
 
-console.log(inputVal)
+// console.log(inputVal)
 if(inputVal.endsWith('@gmail.com')){
     validation.textContent = "Sent Successfully";
+    validation.style.color = "limegreen";
+
             setTimeout(() => {
                 validation.textContent = "";
-                validation.textContent.color = "green";
             },2000);
 }else{
-    validation.textContent = "Please enter valid email"; 
+    validation.textContent = "Please enter valid email !!"; 
     setTimeout(() => {
         validation.textContent = "";
-        validation.color = "red";
-    },2000);
+        validation.style.color = "red";
+    },3000);
 }
     
 }
