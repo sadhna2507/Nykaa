@@ -22,7 +22,9 @@
        const getData = async () =>{
 
         
-               let res = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json');
+              //  let res = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json');
+              let res = await fetch('https://prakash-dey.github.io/api/nyka.json');
+
             let acutaldata = await res.json();
             loading.remove();
             // console.log(acutaldata)
