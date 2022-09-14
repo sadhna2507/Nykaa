@@ -384,3 +384,23 @@ function Showluxe_Box() {
 function HIDEluxe_Box() {
     Luxe_box.style.display = "none"
 }
+
+
+//slider
+
+$(document).ready(function () {
+    $('.slide').slick({
+      dots: true,
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      prevArrow: '<button class="slick-prev"> < </button>',
+      nextArrow: '<button class="slick-next"> > </button>',
+    });
+  
+  
+  
+  });
+  
