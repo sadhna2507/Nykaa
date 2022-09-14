@@ -1,11 +1,9 @@
-section.mywish {
-    margin: 10em 10px 0px 10px;
-}
+
 .MyProfile-Container{
     width: 78%;
     margin: auto;
     display: grid;
-    grid-template-columns: 26% 72%;
+    grid-template-columns: 26% 50% 33%;
     grid-gap: 2%;
     margin-bottom: 1rem;
 }
@@ -15,6 +13,8 @@ section.mywish {
     width: 100%;
     flex-direction: column;
     height: 17.6rem;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
 }
 .Myprofile-navdiv > a {
     padding: 0.8rem 0;
@@ -36,6 +36,8 @@ ul.breadcrumb.mywish {
     background-color: #fff;
     padding-bottom: 1rem;
     width: 80%;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
 
 }
 

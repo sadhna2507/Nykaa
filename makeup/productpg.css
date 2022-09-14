@@ -95,8 +95,9 @@ body {
 
 .slider {
     position: relative;
-    z-index: 200;
+    z-index: -1;
     padding: 0 0px;
+    /* z-index: ; */
 
 }
 
@@ -251,6 +252,8 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
+    color: black;
+
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
@@ -352,7 +355,7 @@ span.feature {
 .productName {
     color: #001325;
     font-size: 16px;
-    height: 40px;
+    height: 33px;
     overflow: hidden;
     font-weight: 500;
 }
@@ -425,6 +428,8 @@ span.priceValue {
     background-color: #fc2779;
     padding: 10px 3px;
     width: 80%;
+    margin: 10px;
+
 }
 
 .productEl {

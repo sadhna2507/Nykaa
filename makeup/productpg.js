@@ -99,12 +99,10 @@ const getData = async () => {
                             </a>
                         </div>
                         <div class="wishlist">
-                        <div class="shades">
-                             16 Shades
-                          </div> 
+                
                             
-                            <div class="hoverbtn" style=" display: none;" >
-                                <button class="heartBtn" type="button">
+                            <div class="hoverbtn" style="display:flex" >
+                                <button class="heartBtn" type="button" id="heart">
                                     <i class='bx bx-heart'></i>
 
                                 </button>
@@ -112,7 +110,7 @@ const getData = async () => {
                                     <i class='bx bxs-heart'></i>
                                 </button>
 
-                                <button type="button" class="previewBtn" onclick="getProduct(event)">
+                                <button type="button" class="previewBtn"  id="${id}">
                                     Add to Bag
                                 </button>
                             </div>
@@ -121,48 +119,75 @@ const getData = async () => {
 
     mainDiv.insertAdjacentHTML('beforeend', htmlcode);
 
-    let shades = document.querySelector(".shades");
+    // let shades = document.querySelector(".shades");
 // console.log(shades)
-var hoverFlag = true
-let hoverbtn = document.querySelector(".hoverbtn")
-function showDDiv() {
-  if (hoverFlag) {
-    hoverbtn.style.display = "flex"
-    hoverbtn.style.width = "100%"
+let addBtn = document.getElementById(id)
+addBtn.addEventListener("click", function (){
+  productCart(val)
 
-    shades.style.display = "none"
-
-  } else {
-    hoverbtn.style.display = "none"
-    shades.style.display = "block"
-
-
+})
+function productCart(product){
+  let cart = localStorage.getItem('cart');
+  let cartArray = [];
+  console.log(product)
+  if(!cart){
+      cartArray.push(product)
+      let storeCart = JSON.stringify(cartArray);
+      localStorage.setItem('cart', storeCart)
+      // console.log('working')
+  }
+  else{
+      let getStoredCart = JSON.parse(cart);
+      getStoredCart.push(product);
+      localStorage.setItem('cart', JSON.stringify(getStoredCart))
   }
 
+  console.log(cart)
 }
 
+var hoverFlag = true
+let hoverbtn = document.querySelector(".hoverbtn")
+// function showDDiv() {
+//   if (hoverFlag) {
+//     hoverbtn.style.display = "flex"
+//     hoverbtn.style.width = "100%"
+
+//     shades.style.display = "none"
+
+//   } else {
+//     hoverbtn.style.display = "none"
+//     shades.style.display = "block"
 
 
-let heartBtn = document.querySelector(".heartBtn")
+//   }
+
+// }
+
+
+
+let heartBtn = document.getElementById("heart")
 let fillBtn = document.querySelector(".fillBtn")
 
 let heartflag = true
+heartBtn.addEventListener("click", heartPop)
 
-heartBtn.addEventListener("click", function () {
+ function heartPop() {
   if (heartflag) {
     heartBtn.style.display = "none"
-    fillBtn.style.display = "block"
+    fillBtn.style.display = "block";
+    heartflag = false;
   } else {
     heartBtn.style.display = "block"
-    fillBtn.style.display = "none"
+    fillBtn.style.display = "none";
+    heartflag = true;
   }
 
 
-})
+ }
 
-shades.addEventListener("click", ()=> {
-  showDDiv();
-});
+// shades.addEventListener("click", ()=> {
+//   showDDiv();
+// });
 
 
   })
@@ -321,34 +346,34 @@ function showCat() {
 //cart here
 // let mainDiv1 = document.getElementById("main-div");
 
-async function getProduct() {
-    let res = await fetch('https://prakash-dey.github.io/api/nyka.json');
-    let data = await res.json();
-    showProduct(data)
-    console.log(data)
-}
+// async function getProduct() {
+//     let res = await fetch('https://prakash-dey.github.io/api/nyka.json');
+//     let data = await res.json();
+//     showProduct(data)
+//     console.log(data)
+// }
 
-function showProduct(products) {
-    products.forEach(prod => {
-        let div = document.createElement('div');
-        div.classList.add("product-div")
+// function showProduct(products) {
+//     products.forEach(prod => {
+//         let div = document.createElement('div');
+//         div.classList.add("product-div")
 
-        let img = document.createElement('img');
-        img.src = prod.image;
+//         let img = document.createElement('img');
+//         img.src = prod.image;
 
-        let price = document.createElement('p');
-        price.innerText = prod.price;
+//         let price = document.createElement('p');
+//         price.innerText = prod.price;
 
-        let addToCart = document.createElement('button');
-        addToCart.innerText = "add to cart";
-        addToCart.addEventListener('click', () => {
-            productCart(prod)
-        })
+//         let addToCart = document.createElement('button');
+//         addToCart.innerText = "add to cart";
+//         addToCart.addEventListener('click', () => {
+//             productCart(prod)
+//         })
 
-        div.append(img,price,addToCart);
-        mainDiv.append(div)
-    })
-}
+//         div.append(img,price,addToCart);
+//         mainDiv.append(div)
+//     })
+// }
 
 function productCart(prod){
     let cart = localStorage.getItem('cart');
