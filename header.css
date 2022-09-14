@@ -464,6 +464,10 @@
   .cart--icon {
     cursor: pointer;
   }
+  .cartA {
+    color: black;
+    margin: 0px 10px;
+}
   
   /* search input */
   .search-resultbox {
