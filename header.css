@@ -333,9 +333,12 @@
   
   #user--icon {
     font-size: 20px;
-    margin-right: 0px;
+    margin-right: 7px;
     outline: none;
     color: black;
+  }
+  #user--icon:hover{
+    color: #fc2779;
   }
   
   
@@ -414,6 +417,9 @@
     vertical-align: middle;
     margin-right: 0;
   }
+  .search__container {
+    display: flex;
+}
 
   .search_icon_second_bar{
     font-size: 17px;
@@ -463,6 +469,9 @@
   
   .cart--icon {
     cursor: pointer;
+  }
+  .cart--icon:hover{
+    color: #fc2779;
   }
   .cartA {
     color: black;
@@ -543,6 +552,8 @@
     border-top: 1px solid lightgray;
     margin-top: 10px;
     padding: 10px;
+    z-index: 300;
+
   }
   .topBrandsHere {
     display: flex;
@@ -573,6 +584,8 @@
   }
   .A-Z a {
     color: black;
+    margin: 3px;
+
   }
   .A-Z a:hover {
     color: #fc2779;
@@ -1110,6 +1123,8 @@
     top: 22%;
     width: 75%;
     left: 12.5%;
+    z-index: 99;
+
     border: 1px solid lightgray;
     border-top: none;
   }
@@ -1188,3 +1203,73 @@
     border-radius: 0.5rem;
   }
   
+
+  /* //slider */
+
+  .slide .slick-prev {
+    left: 20px;
+    text-align: center;
+    width: 30px;
+    /* text-align: center; */
+    border-radius: 25px;
+    height: 30px;
+    background-color: white;
+}
+
+.slide .slick-next {
+    right: 20px;
+    text-align: center;
+    width: 30px;
+    /* text-align: center; */
+    border-radius: 25px;
+    height: 30px;
+    background-color: white;
+}
+
+.slide {
+    position: relative;
+    padding: 0 0px;
+    /* z-index: ; */
+
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 43%;
+    font-size: 20px;
+    color: #fc2779;
+    z-index: 200;
+    border: none;
+
+}
+
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+
+  list-style-type: none;
+
+
+}
+
+.slick-dots>li {
+  margin: 0 0.25rem;
+}
+
+.slick-dots>li>button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #eba8c1;
+  text-indent: -9999px;
+}
+
+.slick-dots>li.slick-active button {
+  background-color: #fc2779;
+}
