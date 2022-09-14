@@ -340,8 +340,10 @@
   
   
   #FOR-Sign {
-      cursor: pointer;
-  }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
   #FOR-Logged {
     cursor: pointer;
     display: none;

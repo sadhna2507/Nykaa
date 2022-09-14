@@ -95,7 +95,6 @@ body {
 
 .slider {
     position: relative;
-    z-index: -1;
     padding: 0 0px;
     /* z-index: ; */
 
@@ -109,6 +108,9 @@ body {
     z-index: 200;
     border: none;
 
+}
+.search__container {
+    display: flex;
 }
 
 .slick-dots {
@@ -429,7 +431,14 @@ span.priceValue {
     padding: 10px 3px;
     width: 80%;
     margin: 10px;
+    cursor: pointer;
 
+
+}
+.previewBtn:hover{
+    opacity: 0.9;
+    color: black;
+    font-weight: 800;
 }
 
 .productEl {
