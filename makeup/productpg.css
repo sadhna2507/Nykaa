@@ -95,8 +95,9 @@ body {
 
 .slider {
     position: relative;
-    z-index: 200;
+    z-index: -1;
     padding: 0 0px;
+    /* z-index: ; */
 
 }
 
@@ -234,8 +235,7 @@ body {
 }
 
 .filters {
-    max-width: 270px;
-    min-width: 270px;
+    width: 270px;
     margin: 0 10px;
 }
 
@@ -252,6 +252,8 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
+    color: black;
+
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
@@ -313,7 +315,8 @@ input[type='radio']:checked:after {
 }
 
 .wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 
@@ -343,7 +346,6 @@ span.feature {
 
 .productInfo {
     display: flex;
-    width: 215px;
     flex-direction: column;
     text-align: center;
     padding: 10px;
@@ -353,7 +355,7 @@ span.feature {
 .productName {
     color: #001325;
     font-size: 16px;
-    height: 40px;
+    height: 33px;
     overflow: hidden;
     font-weight: 500;
 }
@@ -403,7 +405,7 @@ span.priceValue {
 .wishlist button {
     border: none;
 }
-button.fillBtn {
+.wishlist button.fillBtn {
     font-size: 25px;
     background-color: white;
     padding: 3px 0px;
@@ -411,7 +413,7 @@ button.fillBtn {
     width: 20%;
 
 }
-.heartBtn {
+.wishlist .heartBtn {
     font-size: 25px;
     color: #fc2779;
     width: 20%;
@@ -426,6 +428,8 @@ button.fillBtn {
     background-color: #fc2779;
     padding: 10px 3px;
     width: 80%;
+    margin: 10px;
+
 }
 
 .productEl {
@@ -566,5 +570,38 @@ span.CatArrow {
 img.productImg {
     width: 100%;
     height: 200px;
+
+}
+
+
+.product-div > img {
+    width: 200px;
+}
+
+#main-div {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+
+@media only screen and (max-width: 600px){
+    .productInfo{
+        width: 0px;
+        padding: 0px;
+
+    }
+    .filters {
+        width: 134px;
+    }
+    span.feature {
+        font-size: 10px;
+    }
+    span.bestSell {
+        font-size: 10px;
+    }
+
+
+
+
 
 }

@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+   margin-bottom: 10px;
+  
+   
+}
+body{
+    background-color: rgb(230, 228, 228);
+}
+.section-1{
+  margin-bottom: 30px;
+    
+}
+h1{
+  color: rgb(68, 67, 67);
+  margin: 25px;
+  font-size: 30px;
+  /* font-weight: bold; */
+}
+.part-A{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+.part-B{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+h2{
+  color: rgb(68, 67, 67);
+  margin: 25px;
+  font-size: 25px;
+}
+.tranding{
+  margin-top: 30px;
+  
+}
+.warning{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

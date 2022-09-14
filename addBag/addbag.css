@@ -1,0 +1,82 @@
+
+
+
+.addToBagCont img.imgBox {
+    width: 200px;
+    height: 200px;
+}
+
+.Myprofile-navdiv > a:nth-child(3) {
+    color: #fc2779;
+    border-right: 3px solid #fc2779;
+}
+.Myprofile-navdiv > a {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid lightgray;
+    color: rgb(75, 73, 73);
+    font-size: 14px;
+    text-decoration: none;
+
+}
+
+.Myprofile-navdiv > a:nth-child(4) {
+    border-bottom: 1px solid lightgray !important;
+    color: rgb(75, 73, 73) !important;
+}
+
+ .cartEL {
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
+}
+
+.paymentDiv {
+    background-color: white;
+    height: 250px;
+    /* background: white; */
+    padding: 10px;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
+}
+
+.paymentList {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentList .plist {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 16px;
+
+}
+
+.paymentDiv .paymentPara {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.paymentList .paylistfour {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.paymentDiv .paymentProced {
+    background-color: #fc2779;
+    /* text-align: center; */
+    border-radius: 33px;
+    font-size: 18px;
+    padding: 12px 37px;
+}
+
+.payBtn {
+    text-align: center;
+}
+
+.cartEL .priceName {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px;
+}

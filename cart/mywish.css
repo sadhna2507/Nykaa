@@ -1,0 +1,84 @@
+
+.MyProfile-Container{
+    width: 78%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 26% 50% 33%;
+    grid-gap: 2%;
+    margin-bottom: 1rem;
+}
+.Myprofile-navdiv{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 17.6rem;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
+}
+.Myprofile-navdiv > a {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid lightgray;
+    color: rgb(75, 73, 73);
+    font-size: 14px;
+    text-decoration: none;
+
+}
+ul.breadcrumb.mywish {
+    margin: 10px auto;
+}
+.Myprofile-navdiv > a:nth-child(4) {
+    color: #fc2779;
+    border-right: 3px solid #fc2779;
+}
+
+.MYWISH-CONT{
+    background-color: #fff;
+    padding-bottom: 1rem;
+    width: 80%;
+    border: 1px solid #0013252e;
+    border-radius: 8px;
+
+}
+
+.mywish-text{
+    padding: 1rem 1.5rem;
+    font-size: 22px;
+    border-bottom: 1px solid lightgray;
+}
+.prod-count{
+    color: #fc2779;
+}
+
+.MYWISH-BOX{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-gap: 2%;
+}
+.wish_div {
+    padding: 0.8rem;
+    text-align: center;
+    border:2px solid rgba(182, 175, 175, 0.5);
+}
+
+.wish_div > img {
+    height:55%;
+    width: 100%;
+}
+.movetobag{
+    width: 100%;
+    border: none;
+    border-top: rgba(182, 175, 175, 0.5);
+    color: #fc2779;
+    background-color: #fff;
+}
+.cutbtn{
+    float: right;
+    padding:0 5px;
+    border-radius: 45%;
+    margin-bottom: 5px;
+    border: 1px solid rgb(212, 206, 206);
+    background-color: #fff;
+    color: grey;
+}

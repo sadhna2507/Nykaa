@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignIn || Nykaa</title>
+    <title>Register || Nykaa</title>
+    <link rel="stylesheet" href="signin.css" />
     <link
       rel="shortcut icon"
       href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"/>
-      <link rel="stylesheet" href="signin.css">
-
+      <!-- <link rel="stylesheet" href="register.css"> -->
       <style>
         body {
     background-color: #F3F3F3;
     font-family: Arial, Helvetica, sans-serif;
   }
   .box {
-    border:2px solid #ec407a;
     background-color: white;
     height: 600px;
     width: 23%;
@@ -28,21 +27,17 @@
   }
 
   .start {
-    /* border:2px solid black; */
     background-color: white;
     padding: 30px;
   }
   .signpara {
-    /* border:2px solid black; */
     font-weight: lighter;
     text-align: center;
     margin: 8px;
-    /* padding-top: 10px; */
+    padding-top: 10px;
     margin-left: 2px;
-    /* padding-top: 20px; */
   }
   .num {
-    /* border:2px solid blue; */
     background-color: #ec407a;
     text-align: center;
     /* height: 35px; */
@@ -51,12 +46,11 @@
     color: white;
     width: 100%;
     margin-left: 6px;
-    margin-top: 200px;
-    border-style: none;
+    /* margin-top: 200px; */
   }
-
-
-
+  .login_btn{
+    margin-top: 200px;
+  }
   input {
     width: 100%;
     margin: auto;
@@ -73,34 +67,40 @@
     border: #ec407a solid;
   }
       </style>
-    
+
   </head>
   <body>
     <div class="box">
       <div class="start">
-        <h3 class="signpara">SIGN IN</h3>
-
+        <h3 class="signpara">LOGIN / REGISTER</h3>
         <hr />
-
         <input id="email" class="signpara" type="text" placeholder="Enter your Email ID"/>
+
         <input id="pass" class="signpara" type="password" placeholder="Enter your Password"/>
 
-        <button class="num signpara">Submit</button>
+        <button onclick="login()" class="login_btn num signpara" id="btn_L">REGISTER</button>
+
+        <a href="/home.html"><button class="num signpara" id="btnR">LOGIN</button></a>
+
       </div>
     </div>
+    <!-- <script src="register.js"></script> -->
     <script>
-      document.querySelector("button").addEventListener("click", signin);
-  var regdUser = JSON.parse(localStorage.getItem("signupNykaa"));
-  function signin() {
-    var email = document.querySelector("#email").value;
-    var pass = document.querySelector("#pass").value;
-    for (var i = 0; i < regdUser.length; i++) {
-      if (regdUser[i].mail == email && regdUser[i].password == pass) {
-        window.location.href = "home.html";
-      } else {
-        alert("Login failed");
-      }
-    }
+      document.querySelector("#btn_L").addEventListener("click", forSubmition);
+  signupArr = JSON.parse(localStorage.getItem("sugnupNykaa")) || [];
+  function forSubmition(event) {
+    event.preventDefault();
+    var dataObj = {
+      mail: document.querySelector("#email").value,
+      password: document.querySelector("#pass").value,
+    };
+    signupArr.push(dataObj);
+    console.log(signupArr);
+    localStorage.setItem("signupNykaa", JSON.stringify(signupArr));
+
+    document.querySelector("#btn_L").addEventListener("click", function () {
+      window.location.href = "regsuccess.html";
+    });
   }
     </script>
   </body>
