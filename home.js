@@ -1,19 +1,49 @@
-//nykaa dhamaka
-let nykaa_dhamaka = document.getElementById("nykaa_dhamaka")
-let flag = true
+//*********************************nykaa dhamaka end*************************************
+
+//    FIRST DIV
+
+let nykaa_dhamaka = document.getElementById("nykaa_dhamaka");
+let flag = true;
 
 setInterval(() => {
+  if (flag == true) {
+    nykaa_dhamaka.style.opacity = "0";
+    flag = false;
+  } else {
+    nykaa_dhamaka.style.opacity = "1";
+    flag = true;
+  }
+}, 1000);
 
-    if(flag == true){
-        nykaa_dhamaka.style.opacity = "0"
-        flag = false
-    }else {
-        nykaa_dhamaka.style.opacity = "1"
-        flag = true
-    }
-},1000)
 
-//nykaa dhamaka end
+
+//*********************************nykaa dhamaka end*************************************
+
+//  *********** ***********************login****************************
+const userLoggedInData = JSON.parse(localStorage.getItem("loggedInUser")) || {};
+
+if (userLoggedInData.regUserName != undefined) {
+  const accountBtn = document.getElementById("accountNameId");
+  accountBtn.textContent = userLoggedInData.regUserName;
+}
+//  *********** ***********************login****************************
+
+
+// *****************************************logout*****************************
+
+
+let sign_out = document.querySelector(".Sign-Out");
+
+sign_out.addEventListener("click", SIGNOUT);
+
+function SIGNOUT() {
+  localStorage.removeItem("loggedInUser");
+}
+
+
+// *****************************************logout*****************************
+
+
 
 //brand section navbar
 
