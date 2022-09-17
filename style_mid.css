@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  /* text-align: center; */
+ margin-bottom: 10px;
+
+ 
+}
+
+body{
+/* text-align: center; */
+  background-color: rgb(230, 228, 228);
+}
+.mainBodyPart{
+text-align: center;
+}
+.section-1{
+margin-bottom: 30px;
+  
+}
+#start_slide_img{
+margin-bottom: 10px;
+}
+#start_slide_img :hover{
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+h1{
+color: rgb(68, 67, 67);
+margin: 25px;
+font-size: 30px;
+/* font-weight: bold; */
+}
+.part-1 div img :hover{
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.part-A{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 20px;
+
+}
+.part-A img:hover{
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.part-B{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+.part-B img:hover{
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+h2{
+color: rgb(68, 67, 67);
+margin: 25px;
+font-size: 25px;
+}
+.tranding{
+margin-top: 30px;
+
+}
+.warning{
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.secondLastDiv img :hover{
+/* box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
+border: 1px solid black;
+}

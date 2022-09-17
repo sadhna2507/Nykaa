@@ -122,8 +122,8 @@ body {
   }
   .right > div > :nth-child(4) {
     position: relative;
-    top: 0px;
-    right: -40px;
+    top: 6px;
+    right: -9px;
     font-size: 30px;
   }
   

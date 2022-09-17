@@ -8,23 +8,153 @@
     <link rel="stylesheet" href="signin.css" />
     <link
       rel="shortcut icon"
-      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"/>
-      <link rel="stylesheet" href="register.css">
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"
+    />
+    <style>
+      body {
+        background-color: #f3f3f3;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .box {
+        background-color: white;
+        height: 600px;
+        width: 23%;
+        margin: 80px auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+      }
 
+      .start {
+        background-color: white;
+        padding: 30px;
+      }
+      .signpara {
+        font-weight: lighter;
+        text-align: center;
+        margin: 8px;
+        padding-top: 10px;
+        margin-left: 2px;
+      }
+      .num {
+        background-color: #ec407a;
+        text-align: center;
+        margin: 5px auto;
+        padding: 15px;
+        color: white;
+        width: 100%;
+        margin-left: 6px;
+      }
+      .login_btn {
+        margin-top: 200px;
+      }
+      input {
+        width: 100%;
+        margin: auto;
+        height: 35px;
+        background-color: #fafafa;
+        border: 1px solid palevioletred;
+        padding-top: 10px;
+      }
+      input {
+        border-radius: 5px;
+      }
+      input:focus {
+        outline: none;
+        border: #ec407a solid;
+      }
+    </style>
   </head>
   <body>
     <div class="box">
       <div class="start">
         <h3 class="signpara">LOGIN / REGISTER</h3>
         <hr />
-        <input id="email" class="signpara" type="text" placeholder="Enter your Email ID"/>
+        <input
+          id="email"
+          class="signpara"
+          type="text"
+          placeholder="Enter your Email ID"
+        />
 
-        <input id="pass" class="signpara" type="password" placeholder="Enter your Password"/>
+        <input
+          id="pass"
+          class="signpara"
+          type="password"
+          placeholder="Enter your Password"
+        />
 
-        <button class="num signpara">Register</button>
+        <button class="login_btn num signpara" id="btn_L">REGISTER</button>
 
+        <button class="num signpara" id="btnR">LOGIN</button>
       </div>
     </div>
-    <script src="register.js"></script>
+
+
+    <script>
+
+
+
+
+      // _******************************************register btn function**************************************
+      const signUpBtn = document.querySelector("#btn_L");
+      const logInBtn = document.getElementById("btnR");
+      let userData = [];
+      if (localStorage.getItem("userData")) {
+        userData = JSON.parse(localStorage.getItem("userData"));
+      }
+      signUpBtn.addEventListener("click", () => {
+        const eMail = document.querySelector("#email").value;
+        const passWord = document.querySelector("#pass").value;
+
+        if (!eMail.endsWith("@gmail.com")) {
+          alert("Invalid Email");
+        } else {
+          const user = userData.filter((x) => {
+            return x.userEmail == eMail;
+          });
+          
+          if (user.length == 0) {
+            console.log(user);
+             window.location.href = "regsuccess.html";
+          } else {
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+            alert("user already exist please login to continue");
+          }
+        }
+      });
+
+
+      // ********************************************login btn function*******************************
+      logInBtn.addEventListener("click", () => {
+        const eMail = document.querySelector("#email").value;
+        const passWord = document.querySelector("#pass").value;
+        console.log(eMail, passWord);
+
+        if (!eMail.endsWith("@gmail.com")) {
+          alert("Invalid Email");
+        } else {
+          const user = userData.find((x) => {
+            return x.userEmail == eMail;
+            
+          });
+          console.log(user);
+          if (user == undefined || Object.keys(user).length == 0) {
+            window.location.href = "regsuccess.html";
+          } else {
+            console.log(user , passWord)
+            if (user.userPass == passWord) {
+              
+              localStorage.setItem("loggedInUser", JSON.stringify(user));
+              window.location.href = "../home.html";
+            } else {
+              alert("incorrect password");
+            }
+          }
+        }
+      });
+
+    </script>
   </body>
 </html>

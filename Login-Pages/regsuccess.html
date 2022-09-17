@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #f3f3f3;
+      }
+      .container {
+        width: 400px;
+
+        height: 600px;
+        margin: auto;
+        margin-top: 60px;
+      }
+      .inner-con {
+        font-family: "Roboto", sans-serif;
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 15px;
+      }
+      h4 {
+        border-bottom: 1px solid rgb(207, 205, 205);
+        padding-bottom: 15px;
+        width: 90%;
+        text-align: center;
+        color: #454a5e;
+      }
+
+      #submitBtnRegister {
+        /* border: 2px solid black; */
+        background-color: #fc2779;
+        /* border-radius: 5px; */
+        margin-top: 20px;
+        color: white;
+        /* width: 90%; */
+        cursor: pointer;
+        padding: 20px 90px;
+        text-align: center;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid gray;
+        width: 70%;
+        height: 50px;
+        margin-bottom: 10px;
+        outline: none;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+      #forms {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-con">
+        <h4>SIGNUP / REGISTER</h4>
+        <p style="font-size: 13px">
+          Register to Earn
+          <span style="color: #fc2779">2000 Reward Points!</span>
+        </p>
+        <div id="forms">
+          <input placeholder="Name" type="text" id="regName" />
+          <input placeholder="Phone Number" type="number" id="reNum" />
+          <input
+            placeholder="Email Address"
+            type="text"
+            name=""
+            id="regEmail"
+          />
+          <input placeholder="Create Password" type="password" id="regPass" />
+          
+            <button id="submitBtnRegister">Submit</button>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      const registerBtn = document.getElementById("submitBtnRegister");
+      const userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+      registerBtn.addEventListener("click", () => {
+        const regName = document.getElementById("regName").value;
+        const regMail = document.getElementById("regEmail").value;
+        const regPhone = document.getElementById("reNum").value;
+        const regPass = document.getElementById("regPass").value;
+
+        if (!regMail.endsWith("@gmail.com")) {
+          alert("Invalid Email");
+        } else {
+          const search = userData.filter((x) => {
+                return x.userEmail == eMail;
+          });
+
+          if(search.length>0){
+            alert("Already a user go for login")
+          }
+
+          let regUserDetails = {
+            regUserName: regName,
+            regPhoneNo: regPhone,
+            userEmail: regMail,
+            userPass: regPass,
+          };
+
+          console.log(regUserDetails)
+          
+          userData.push(regUserDetails);
+          console.log(userData)
+          localStorage.setItem("userData", JSON.stringify(userData));
+
+          localStorage.setItem(
+            "loggedInUser",
+            JSON.stringify(regUserDetails)
+          );
+          window.location.href = "../home.html";
+
+        }
+      });
+
+    </script>
+  </body>
+</html>
